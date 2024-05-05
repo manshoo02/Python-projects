@@ -36,6 +36,7 @@ def calculator():
         
         print(f"{num1} {op_symbol} {num2} = {ans}")
         
+        temp = input("Type 'y' to continue an operation with the answer , 'n' to start a new calculation and 'e' to exit the calculator program : ").lower()
         if temp == "y":
             num1 = ans
         elif temp == "n":
