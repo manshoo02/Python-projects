@@ -9,15 +9,12 @@ turtle.shape(image)
 states = 28
 data = pandas.read_csv("States of India Quiz\states_data.csv")
 all_states = data.state.to_list()
-print(all_states)
 guessed_states = []
 while len(guessed_states) < 50:
     answer = screen.textinput(title=f"{len(guessed_states)}/28 States Guessed", prompt="Guess the state.").title()
+    print(answer)
     if answer == "Exit":
-        missing = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing.append(state)
+        missing = [state for state in all_states if state not in guessed_states]
         print("States to learn :")
         print(missing)
         break
