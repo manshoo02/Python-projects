@@ -20,10 +20,8 @@ def guess_the_num(number):
   diff = input("CHOOSE THE DIFFICULTY,. Type 'easy' or 'hard. ").lower()
   if diff == "easy":
     no_of_guess = 10
-    print("You have 10 attempts to guess the number. Good luck!")
   elif diff == "hard":
     no_of_guess = 5
-    print("You have 5 attempts to guess the number. Good luck!")
   else:
     ("INVALID INPUT!")
   print(f"You have {no_of_guess} guesses remaining to guess the number.")
